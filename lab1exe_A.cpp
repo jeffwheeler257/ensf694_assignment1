@@ -1,9 +1,9 @@
 /*
  *  lab1exe_A.cpp
- *  ENSF 694 Lab 1, exercise A
+ *  ENSF 694 Lab 1 - Exercise A
  *  Created by Mahmood Moussavi
  *  Completed by: Jeff Wheeler
- *	Submission date: July 3, 2024
+ *  Submission date: July 3, 2024
  */
 
 #include <iostream>

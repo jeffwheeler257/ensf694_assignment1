@@ -1,7 +1,9 @@
- /*
- *  lab1exe_C.cpp
- *  ENSF 694 Lab 1 Exercise D
- *
+/*
+ *  lab1exe_B1.cpp
+ *  ENSF 694 Lab 1 - Exercise C
+ *  Created by Mahmood Moussavi
+ *  Completed by: Jeff Wheeler
+ *  Submission date: July 3, 2024
  */
 
 #include <iostream>
@@ -36,11 +38,18 @@ int main(void)
     exit(1);
   }
   
-  cout << "Doing conversion for input of " <<  millisec <<" milliseconds ... \n", millisec;
+  cout << "Doing conversion for input of " <<  millisec <<" milliseconds ... \n";
 
   /* MAKE A CALL TO time_convert HERE. */
+  time_convert(millisec, &minutes, &seconds);
+
   cout << "That is equivalent to " << minutes << " minute(s) and " << seconds << " second(s).\n";
   return 0;
 }
 
 /* PUT YOUR FUNCTION DEFINITION FOR time_convert HERE. */
+void time_convert(int ms_time, int *minutes_ptr, double *seconds_ptr){
+  double total_seconds = ms_time / 1000.0;
+  *minutes_ptr = (int) total_seconds / 60;
+  *seconds_ptr =  total_seconds - *minutes_ptr * 60;
+}

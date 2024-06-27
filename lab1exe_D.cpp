@@ -38,10 +38,10 @@ int main(void)
     good_copy(x, y, 4);
    
     cout << "\nThe values in array x after call to good_copy are expected to be:";
-    cout << "\n2.30, 1.20, 2.20, 4.10\n";
+    cout << "\n2.30, -8.25, 2.20, 4.10\n";
     cout << "And the values are:\n";
     for(int i = 0; i < 4; i++)
-        cout << setprecision(2) << x[i] << "  ";
+        cout << fixed << setprecision(2) << x[i] << "  ";
     
     cout << "\nThe values in matrix are:\n";
     print_matrix(matrix, 3);

@@ -1,6 +1,6 @@
 /*
- *  lab1exe_B1.cpp
- *  ENSF 694 Lab 1 - Exercise B1
+ *  lab1exe_B2.cpp
+ *  ENSF 694 Lab 1 - Exercise B2
  *  Created by Mahmood Moussavi
  *  Completed by: Jeff Wheeler
  *  Submission date: July 3, 2024

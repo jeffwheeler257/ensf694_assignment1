@@ -1,3 +1,11 @@
+/*
+ *  lab1exe_D.cpp
+ *  ENSF 694 Lab 1 - Exercise D
+ *  Created by Mahmood Moussavi
+ *  Completed by: Jeff Wheeler
+ *  Submission date: July 3, 2024
+ */
+
 #include <iostream>
 #include <iomanip>
 using namespace std;

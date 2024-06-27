@@ -1,5 +1,5 @@
 /*
- *  lab1exe_B1.cpp
+ *  lab1exe_C.cpp
  *  ENSF 694 Lab 1 - Exercise C
  *  Created by Mahmood Moussavi
  *  Completed by: Jeff Wheeler

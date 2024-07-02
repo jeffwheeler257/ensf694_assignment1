@@ -1,5 +1,5 @@
 /*
- *  MyArray.cpp
+ *  MyArray.h
  *  ENSF 694 Lab 1 - Exercise F
  *  Created by Mahmood Moussavi
  *  Completed by: Jeff Wheeler

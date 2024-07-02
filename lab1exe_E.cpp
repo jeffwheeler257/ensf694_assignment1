@@ -31,7 +31,7 @@ int what(const int *a, int n)
   cout << "*p is " << *p << "*q is " << *q << "\n";
   // point one (after the 2nd loop has finished)
 
-  return min - max;
+  return *min - *max;
 }
 
 int main(void)

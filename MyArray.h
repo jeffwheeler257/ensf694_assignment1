@@ -22,7 +22,7 @@ int search(const MyArray* myArray, int obj);
  * if there is no match for obj.
  */
 
-void append( MyArray* myArray, int array[], int n );
+void append( MyArray* myArray, int array[], int n);
 /*
  * REQUIRES: pointer list points to an object of struct MyArray and array points to
  * an arrary of n integer numbers.
@@ -46,13 +46,13 @@ void insert_at(MyArray* myArray, int pos, int val);
  * myArray->array to the right of element pos. Then, increments that list_size by one.
  */
 
-int remove_at(MyArray* myArray, int pos );
+int remove_at(MyArray* myArray, int pos);
 /*
  * REQUIRES: pos >= 0 and pos <= size(), and pointer myArray points to an object of struct
  * MyArray.
  * PROMISES: removes the value of element myArray->array[pos], by moving the values in the
  * elements of myArray->array, starting from position pos+1, to the left. if process is
- * successful, increments list_size by one. Also, returns the value of the element that
+ * successful, decrements list_size by one. Also, returns the value of the element that
  * was removed.
  */
 
@@ -81,12 +81,12 @@ int size(MyArray* myArray);
  * PROMISES: returns value of myArray->list_size.
  */
 
-int count(MyArray* myArray, int obj );
+int count(MyArray* myArray, int obj);
 /*
  * REQUIRES: pointer myArray points to an object of struct MyArray.
  * PROMISES: returns the count of elements of myArray->array that their value is equal to obj.
  */
-int remove_all(MyArray *myArray, in value);
+int remove_all(MyArray *myArray, int value);
 /*
  * PROMISES: removes all the occurances of value and returns the number of removed
  * values.

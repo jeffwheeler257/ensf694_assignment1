@@ -12,6 +12,11 @@ int what(const int *a, int n)
 {
   const int *max = a, *min = a + n - 1, *guard = a + n;
   const int *p, *q;
+
+  cout << "At the start of the function: \n";
+  cout << "*max is "  << *max << " *min is " << *min << " *guard is " << *guard << "\n";
+  cout << "*p is uninitialized" << "*q is uninitialized" << "\n";
+
   for (p = a + 1; p != guard; p++) {
     if (*p > *max)
       max = p;
@@ -20,7 +25,10 @@ int what(const int *a, int n)
     if (q[-1] < *min)
       min = q - 1;
   }
-
+  
+  cout << "At the end of the function: \n";
+  cout << "*max is "  << *max << " *min is " << *min << " *guard is " << *guard << "\n";
+  cout << "*p is " << *p << "*q is " << *q << "\n";
   // point one (after the 2nd loop has finished)
 
   return min - max;

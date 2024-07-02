@@ -11,9 +11,26 @@
 using namespace std;
 const int COL_SIZE = 3;
 const int ROW_SIZE = 3;
+
+
 void try_to_change(double* dest);
+/*
+ * REQUIRES: Destination point
+ * PROMISES: Trys to change the destination point in an incorrect way
+ */
+
 void try_to_copy(double dest[], double source[]);
+/*
+ * REQUIRES: Destination & source array
+ * PROMISES: Trys to copy the source array to the destination array in an incorrect way
+ */
+
 double add_them (double a[5]);
+/*
+ * REQUIRES: An Array
+ * PROMISES: Trys to add points within an array in an incorrect way
+ */
+
 
 void print_matrix(double matrix[][COL_SIZE], int rows);
 /*
@@ -34,8 +51,10 @@ int main(void)
     double matrix[ROW_SIZE][COL_SIZE] = { {10, 20, 30}, {40, 50, 60}, {70, 80, 90}};
     cout << " sizeof(double) is " << (int) sizeof(double) << " bytes.\n";
     cout << " size of x in main is: " << (int) sizeof(x) << " bytes.\n";
-    cout << " y has " << (int) (sizeof(y)/ sizeof(double)) << " elements and its size is: " <<  (int) sizeof(y) << " bytes.\n";
-    cout << " matrix has " << (int) (sizeof(matrix)/ sizeof(double)) << " elements and its size is: " <<  (int) sizeof(matrix) << " bytes.\n";
+    cout << " y has " << (int) (sizeof(y)/ sizeof(double)) << " elements and its size is: " 
+         <<  (int) sizeof(y) << " bytes.\n";
+    cout << " matrix has " << (int) (sizeof(matrix)/ sizeof(double)) << " elements and its size is: " 
+         <<  (int) sizeof(matrix) << " bytes.\n";
     
     try_to_copy(x, y);
     try_to_change(x);
@@ -84,18 +103,26 @@ double add_them (double arg[5])
     
     /* point three */
     cout << "\n sizeof(arg) in add_them is " << (int) sizeof(arg) << " bytes.\n";
-    cout << "\n Incorrect array size computation: add_them says arg has " << (int) (sizeof(arg)/sizeof(double)) <<" element.\n";
+    cout << "\n Incorrect array size computation: add_them says arg has " 
+         << (int) (sizeof(arg)/sizeof(double)) <<" element.\n";
     
     return arg[0] + arg[1] + arg[2];
 }
 
 void good_copy(double *dest, double *source, int n)
 {
-    // mising code -- students must complete the implementation of this funcion.
+    for (int i= 0; i < n; i++){
+        dest [i] = source [i];
+    }
 }
 
 
 void print_matrix(double matrix[][COL_SIZE], int rows)
 {
-    // mising code -- students must complete the implementation of this funcion.
+    for (int i = 0; i < rows; i++){
+        for (int j = 0; j < COL_SIZE; j++){
+            cout << matrix[i][j] << " ";
+        }
+        cout << "\n";
+    }
 }

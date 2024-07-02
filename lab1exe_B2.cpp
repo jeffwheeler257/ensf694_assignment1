@@ -35,5 +35,5 @@ void quux(int *p, int *q)
   int n;
   n = *p;
   bar(&n, q);
-  cout << "*p is "<< *p << ", *q is " << *q << ".\n";
+  cout << "*p is "<< *p << ", *q is " << *q << " n is " << n << "\n";
 }

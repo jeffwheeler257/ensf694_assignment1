@@ -12,12 +12,42 @@
 using namespace std;
 
 const double G = 9.8;   /* gravitation acceleration 9.8 m/s^2 */
-const double PI = 3.141592654;
+const double PI = 3.141592654;  /* constant for pi */
 
 void create_table(double v);
+/*
+ * REQUIRES:
+ *    v - veloctiy in m/s
+ * PROMISES:
+ * Using a given velocity the fucntion creates a table of projectile's maximum travel distance 
+ * and time for trajectory angles of 0 to 90 degrees in increments of 5 degrees
+ */
+
 double Projectile_travel_time(double a, double v);
+/*
+ * REQUIRES:
+ *    a - angle in degrees
+ *    v - velocity in m/s
+ * PROMISES:
+ * Calculates projectile travel time for a given angle and velocity
+ */
+
 double Projectile_travel_distance(double a, double v);
+/*
+ * REQUIRES:
+ *    a - angle in degrees
+ *    v - velocity in m/s
+ * PROMISES:
+ * Calculates projectile travel distance for a given angle and velocity
+ */
+
 double degree_to_radian(double d);
+/*
+ * REQUIRES:
+ *    d - anlge in degrees
+ * PROMISES:
+ * Converts a degree angle into radians
+ */
 
 int main(void)
 {
@@ -54,7 +84,8 @@ void create_table(double v){
 	cout << "\nAngle" << "\t\t" << "t" << "\t\t" << "d\n";
 	cout << "(deg)" << "\t\t" << "(sec)" << "\t\t" << "(m)\n";
     for (double a = 0.00000; a <= 90.00000; a += 5.00000){
-        cout << a << "\t\t" << Projectile_travel_time(a,v) << "\t\t" << Projectile_travel_distance(a,v) << "\n";
+        cout << a << "\t\t" << Projectile_travel_time(a,v) << "\t\t" 
+        << Projectile_travel_distance(a,v) << "\n";
     }
 }
 

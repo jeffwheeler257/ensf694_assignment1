@@ -1,3 +1,11 @@
+/*
+ *  MyArray.cpp
+ *  ENSF 694 Lab 1 - Exercise F
+ *  Created by Mahmood Moussavi
+ *  Completed by: Jeff Wheeler
+ *  Submission date: July 3, 2024
+ */
+
 #include "MyArray.h"
 
 int search(const MyArray* myArray, int obj){
